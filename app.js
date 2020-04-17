@@ -17,7 +17,7 @@ const order_item = require("./routes/order_item");
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
-bot.on(/\/start/, (msg) => {
+bot.onText(/\/start/, (msg) => {
   bot.sendMessage(
     msg.chat.id,
     `Hallo ${msg.from.first_name} selamat datang di SHOPSHOPAN`,
